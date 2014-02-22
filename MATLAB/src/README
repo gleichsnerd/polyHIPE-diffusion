@@ -1,0 +1,14 @@
+polyHIPE-diffusion/MATLAB
+
+Adam Gleichsner
+"gleichsnerd"
+amg188@case.edu
+
+**All works affiliated with Case Western Reserve University**
+
+**DESCRIPTION**
+This is a hodgepodge collection of all the source files I've written in MATLAB
+for the polyHIPE-diffusion project. Some snippets have been taken and modified 
+from wikis and stack overflow, and the progressbar is from the MATLAB community.
+
+Not all files are executable by themselves.

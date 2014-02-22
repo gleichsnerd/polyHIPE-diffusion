@@ -1,0 +1,50 @@
+% Case Western Reserve University
+% Adam Gleichsner (amg188)
+
+function scriptTrueRandomWalk(rows, columns, [sx, sy], [ex, ey])
+
+tic
+
+    dimensions = 2;         % two dimensional simulation
+    tau = .001;               % time interval in seconds
+
+    R    = .145e-6;              % radius in meters 
+    %eta  = 1.0e-3;              % viscosity of water in SI units (Pascal-seconds) at 293 K 
+    kB   = 1.38e-23;            % Boltzmann constant T    = 293;                 % Temperature in degrees Kelvin
+    eta  = 1.827e-5;              % viscosity of air in SI units (Pascal-seconds) at 293 K 
+    kB   = 1.38e-23;            % Boltzmann constant
+    T    = 293;                 % Temperature in degrees Kelvin
+
+    D    = kB * T / (6 * pi * eta * R);
+    k = sqrt(D * dimensions * tau);
+
+    i = 1;
+    
+    x(i) = sx;
+    y(i) = sy;
+    bwall = true;
+    twall = true;
+    lwall = true;
+    rwall = true;
+    
+    while(x(i) ~= ex && y(i) ~= ey)
+       if x(i) = 0 
+           lwall = false;
+       end
+       if x(i) = columns 
+           rwall = false;
+       end
+       if y(i) = 0
+           bwall = false;
+       end
+       if y(i) = rows
+           twall = false;
+       end
+       
+       numberWindows = round(0 + (1-(0))*rand(1,1)); 
+    end
+    
+    
+toc
+
+end
